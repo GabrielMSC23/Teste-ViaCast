@@ -1,5 +1,5 @@
-#include <stdio.h>
-#include <string.h>
+#include <stdio.h> #importa a bliblioteca com funções basicas de entrada e saída
+#include <string.h> #importa a biblioteca com funções para manipular string
 
 // funçao com ponteiro para definir posição das letras
 void reverseString(char *in, char *out)
