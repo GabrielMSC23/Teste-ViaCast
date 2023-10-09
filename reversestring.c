@@ -5,12 +5,12 @@
 void reverseString(char *in, char *out)
 {
   int i, j;
-  int N = strlen(in);
-  for (i = 0, j = N - 1; j >= 0; ++i, --j)
+  int N = strlen(in); 
+  for (i = 0, j = N - 1; j >= 0; ++i, --j) //O laço copia a posiçao final de in para posiçao inicial de out.
   {
     out[i] = in[j];
   }
-  out[N] = '\0';
+  out[N] = '\0'; //acrescenta nulo no final da string para torna-la valida na linguagem C
 }
 // funçao com ponteiro para definir posição das letras
 void reverseStringInPlace(char *str)
@@ -34,7 +34,7 @@ void reverseStringInPlace(char *str)
         j--;
       }
 
-      inicio = final + 1; // segue para o proximo caracter válido
+      inicio = final + 1; // segue para a proxima palavra na string se tiver.
     }
   }
 }
