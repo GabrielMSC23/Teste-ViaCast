@@ -1,8 +1,8 @@
-from math import sqrt  # importa funções matemáticas
+from math import sqrt  #importa a biblioteca com a função matemática de raiz quadrada
 
 
 def fibonacci(n: int) -> int:
-    if n > 450:  # limite predefinido para posição na sequencia fibonacci
+    if n > 450:  # limite máximo predefinido para posição na sequencia fibonacci
         return "Valor não suportado"
     else:
         return (((1 + sqrt(5)) ** n) - ((1 - sqrt(5))) ** n) / (
