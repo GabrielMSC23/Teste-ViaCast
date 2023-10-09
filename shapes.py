@@ -1,4 +1,4 @@
-from math import *  # importa funçoes matemáticas
+from math import *  # importa a biblioteca com funçoes matemáticas
 
 
 class Rectangle:  # funções para calcular area e perimetro do retangulo
@@ -38,22 +38,12 @@ class Circle:  # funções para calcular area e perimetro do circulo
 
 
 # Chama as funçoes da classe Retângulo
-width, height = map(
-    float,
-    input("Enter the width and height for the rectangle (<width>,<height>):\n>>").split(
-        ","
-    ),
-)
+width, height = map(float, input("Enter the width and height for the rectangle (<width>,<height>):\n>>").split(","),)
 rectangle = Rectangle(width, height)
 print(f"Area: {rectangle.area()}\nPerimeter: {rectangle.perimeter()}")
 
 # Chama as funçoes da classe Triângulo Isoceles
-base, height = map(
-    float,
-    input(
-        "Enter the base and height for the isosceles triangle (<base>,<height>):\n>>"
-    ).split(","),
-)
+base, height = map(float, input("Enter the base and height for the isosceles triangle (<base>,<height>):\n>>").split(","),)
 triangle = IsoscelesTriangle(base, height)
 print(f"Area: {triangle.area()}\nPerimeter: {round(triangle.perimeter(), 1)}")
 
