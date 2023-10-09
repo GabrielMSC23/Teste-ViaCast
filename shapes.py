@@ -1,8 +1,7 @@
-from math import *
+from math import *  # importa funçoes matemáticas
 
 
-class Rectangle:
-
+class Rectangle:  # funções para calcular area e perimetro do retangulo
     def __init__(self, width, height):
         self.width = width
         self.height = height
@@ -14,8 +13,7 @@ class Rectangle:
         return self.width * self.height
 
 
-class IsoscelesTriangle: 
-
+class IsoscelesTriangle:  # funções para calcular area e perimetro do triangulo isoceles
     def __init__(self, base, height):
         self.base = base
         self.height = height
@@ -28,8 +26,7 @@ class IsoscelesTriangle:
         return self.base * self.height / 2
 
 
-class Circle:
-
+class Circle:  # funções para calcular area e perimetro do circulo
     def __init__(self, radius):
         self.radius = radius
 
@@ -41,12 +38,22 @@ class Circle:
 
 
 # Chama as funçoes da classe Retângulo
-width, height = map(float, input("Enter the width and height for the rectangle (<width>,<height>):\n>>").split(","),)
+width, height = map(
+    float,
+    input("Enter the width and height for the rectangle (<width>,<height>):\n>>").split(
+        ","
+    ),
+)
 rectangle = Rectangle(width, height)
 print(f"Area: {rectangle.area()}\nPerimeter: {rectangle.perimeter()}")
 
 # Chama as funçoes da classe Triângulo Isoceles
-base, height = map(float, input("Enter the base and height for the isosceles triangle (<base>,<height>):\n>>").split(","),)
+base, height = map(
+    float,
+    input(
+        "Enter the base and height for the isosceles triangle (<base>,<height>):\n>>"
+    ).split(","),
+)
 triangle = IsoscelesTriangle(base, height)
 print(f"Area: {triangle.area()}\nPerimeter: {round(triangle.perimeter(), 1)}")
 
